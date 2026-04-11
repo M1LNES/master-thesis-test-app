@@ -23,7 +23,7 @@ const filterValues: TaskFilter[] = ["All", "Active", "Completed"];
 export function DashboardPage() {
   const navigate = useNavigate();
   const { logout, user } = useAuth();
-  const { bug, isBug } = useBug();
+  const { bug, bugCode, isBug } = useBug();
   const { toast } = useToast();
 
   const isAdmin = user?.role === "admin";
@@ -132,7 +132,11 @@ export function DashboardPage() {
         throw new Error("Missing authenticated user");
       }
 
-      const created = await createTaskRequest(payload, user.email);
+      const created = await createTaskRequest(
+        payload,
+        user.email,
+        bugCode ?? undefined,
+      );
       setTasks((currentTasks) => [created, ...currentTasks]);
 
       if (!isBug("toast_missing")) {

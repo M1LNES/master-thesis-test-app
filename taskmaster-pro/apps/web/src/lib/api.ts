@@ -82,8 +82,17 @@ export async function getTasksRequest(): Promise<Task[]> {
   return requestJson<Task[]>(`${API_BASE_URL}/tasks`)
 }
 
-export async function createTaskRequest(payload: TaskPayload, owner: string): Promise<Task> {
-  return requestJson<Task>(`${API_BASE_URL}/tasks`, {
+export async function createTaskRequest(
+  payload: TaskPayload,
+  owner: string,
+  bugCode?: string,
+): Promise<Task> {
+  const url = new URL(`${API_BASE_URL}/tasks`)
+  if (bugCode) {
+    url.searchParams.set('b', bugCode)
+  }
+
+  return requestJson<Task>(url.toString(), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

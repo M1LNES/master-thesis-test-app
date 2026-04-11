@@ -13,6 +13,7 @@ import {
 
 const app = express();
 const PORT = 3001;
+const TASK_NO_VALIDATION_BUG_CODE = "n8r4bf6q";
 
 app.use(cors());
 app.use(express.json());
@@ -88,18 +89,25 @@ app.get("/api/tasks", (_req: Request, res: Response<Task[]>) => {
 
 app.post("/api/tasks", (req: Request<unknown, unknown, { title: string; description: string; priority: Task["priority"]; owner: string }>, res: Response<Task | { message: string }>) => {
   const { title, description, priority, owner } = req.body;
+  const bugParam = req.query.b;
+  const bugCode = Array.isArray(bugParam) ? bugParam[0] : bugParam;
+  const bypassValidation = bugCode === TASK_NO_VALIDATION_BUG_CODE;
 
-  if (!title || !priority || !owner) {
+  if (!bypassValidation && (!title || !priority || !owner)) {
     return res.status(400).json({ message: "Title, priority, and owner are required" });
   }
 
+  const resolvedTitle = title ?? "";
+  const resolvedPriority = priority ?? "Low";
+  const resolvedOwner = owner ?? "unknown@test.com";
+
   const task: Task = {
     id: `task-${Date.now()}`,
-    title,
+    title: resolvedTitle,
     description: description ?? "",
-    priority,
+    priority: resolvedPriority,
     status: "Todo",
-    owner,
+    owner: resolvedOwner,
     createdAt: new Date().toISOString()
   };
 

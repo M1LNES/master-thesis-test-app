@@ -1,10 +1,16 @@
 import type { Task, TaskPayload, TaskStatus } from '@/types/task'
+import type { AuthUser } from '@/types/task'
 
 const API_BASE_URL = 'http://localhost:3001/api'
 
 type LoginSuccess = {
   ok: true
   token: string
+  user: AuthUser
+}
+
+type RegisterResult = {
+  message: string
 }
 
 type LoginFailure = {
@@ -45,10 +51,11 @@ export async function loginRequest(email: string, password: string): Promise<Log
   })
 
   if (response.ok) {
-    const payload = await parseJson<{ token: string }>(response)
+    const payload = await parseJson<{ token: string; user: AuthUser }>(response)
     return {
       ok: true,
       token: payload?.token ?? '',
+      user: payload?.user ?? { email, role: 'user' },
     }
   }
 
@@ -75,13 +82,16 @@ export async function getTasksRequest(): Promise<Task[]> {
   return requestJson<Task[]>(`${API_BASE_URL}/tasks`)
 }
 
-export async function createTaskRequest(payload: TaskPayload): Promise<Task> {
+export async function createTaskRequest(payload: TaskPayload, owner: string): Promise<Task> {
   return requestJson<Task>(`${API_BASE_URL}/tasks`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify({
+      ...payload,
+      owner,
+    }),
   })
 }
 
@@ -101,5 +111,23 @@ export async function updateTaskRequest(
 export async function deleteTaskRequest(id: string): Promise<void> {
   await requestJson<{ success: boolean }>(`${API_BASE_URL}/tasks/${id}`, {
     method: 'DELETE',
+  })
+}
+
+export async function registerRequest(
+  fullName: string,
+  email: string,
+  password: string,
+): Promise<RegisterResult> {
+  return requestJson<RegisterResult>(`${API_BASE_URL}/register`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      fullName,
+      email,
+      password,
+    }),
   })
 }

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { TaskCard } from "@/components/TaskCard";
 import { TaskDialog } from "@/components/TaskDialog";
@@ -13,6 +13,7 @@ import {
   getTasksRequest,
   updateTaskRequest,
 } from "@/lib/api";
+import { useToast } from "@/hooks/use-toast";
 import type { Task, TaskPayload } from "@/types/task";
 
 type TaskFilter = "All" | "Active" | "Completed";
@@ -21,8 +22,11 @@ const filterValues: TaskFilter[] = ["All", "Active", "Completed"];
 
 export function DashboardPage() {
   const navigate = useNavigate();
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
   const { bug, isBug } = useBug();
+  const { toast } = useToast();
+
+  const isAdmin = user?.role === "admin";
 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -47,16 +51,21 @@ export function DashboardPage() {
   }, []);
 
   const visibleTasks = useMemo(() => {
+    const roleScopedTasks =
+      isAdmin || isBug("rbac_leak")
+        ? tasks
+        : tasks.filter((task) => task.owner === user?.email);
+
     if (bug === "filter_broken" || activeFilter === "All") {
-      return tasks;
+      return roleScopedTasks;
     }
 
     if (activeFilter === "Active") {
-      return tasks.filter((task) => task.status === "Todo");
+      return roleScopedTasks.filter((task) => task.status === "Todo");
     }
 
-    return tasks.filter((task) => task.status === "Done");
-  }, [activeFilter, bug, tasks]);
+    return roleScopedTasks.filter((task) => task.status === "Done");
+  }, [activeFilter, bug, isAdmin, isBug, tasks, user?.email]);
 
   const openCreateDialog = () => {
     setEditingTask(null);
@@ -98,6 +107,12 @@ export function DashboardPage() {
     setTasks((currentTasks) =>
       currentTasks.filter((currentTask) => currentTask.id !== task.id),
     );
+
+    if (!isBug("toast_missing")) {
+      toast({
+        title: "Task deleted successfully",
+      });
+    }
   };
 
   const handleDialogSubmit = async (payload: TaskPayload) => {
@@ -113,8 +128,24 @@ export function DashboardPage() {
         ),
       );
     } else {
-      const created = await createTaskRequest(payload);
+      if (!user?.email) {
+        throw new Error("Missing authenticated user");
+      }
+
+      const created = await createTaskRequest(payload, user.email);
       setTasks((currentTasks) => [created, ...currentTasks]);
+
+      if (!isBug("toast_missing")) {
+        toast({
+          title: "Task created successfully",
+        });
+      }
+    }
+
+    if (editingTask) {
+      toast({
+        title: "Task updated successfully",
+      });
     }
 
     if (!isBug("modal_wont_close")) {
@@ -141,6 +172,16 @@ export function DashboardPage() {
           <p className="text-sm text-muted-foreground">
             Local-only test target for deterministic E2E scenarios.
           </p>
+          {isAdmin || isBug("admin_menu_visible") ? (
+            <div className="pt-2">
+              <Link
+                to="/dashboard#system-settings"
+                className="text-sm font-semibold text-primary hover:underline"
+              >
+                System Settings
+              </Link>
+            </div>
+          ) : null}
         </div>
         <Button type="button" variant="outline" onClick={handleLogout}>
           Logout
@@ -193,7 +234,11 @@ export function DashboardPage() {
             <TaskCard
               key={task.id}
               task={task}
-              hideDelete={isBug("delete_btn_missing")}
+              canDelete={
+                !isBug("delete_btn_missing") &&
+                (isAdmin || task.owner === user?.email || isBug("rbac_leak"))
+              }
+              showOwnerBadge={isAdmin}
               onToggleStatus={handleToggleStatus}
               onEdit={handleEditTask}
               onDelete={handleDeleteTask}

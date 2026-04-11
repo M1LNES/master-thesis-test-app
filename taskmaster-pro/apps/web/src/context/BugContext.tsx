@@ -8,6 +8,10 @@ const BUG_MODES = [
   "modal_wont_close",
   "filter_broken",
   "status_toggle_fail",
+  "rbac_leak",
+  "admin_menu_visible",
+  "register_password_bypass",
+  "toast_missing",
 ] as const;
 
 export type BugMode = (typeof BUG_MODES)[number] | null;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -20,8 +20,8 @@ export function LoginPage() {
   const { login } = useAuth();
   const { isBug } = useBug();
 
-  const [email, setEmail] = useState("admin@test.com");
-  const [password, setPassword] = useState("password123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isInternalError, setIsInternalError] = useState(false);
@@ -40,7 +40,7 @@ export function LoginPage() {
       }
 
       if (result.ok) {
-        login(result.token);
+        login(result.token, result.user);
         navigate("/dashboard", { replace: true });
         return;
       }
@@ -112,6 +112,16 @@ export function LoginPage() {
             <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? "Signing in..." : "Login"}
             </Button>
+
+            <p className="text-center text-sm text-muted-foreground">
+              Need an account?{" "}
+              <Link
+                to="/register"
+                className="font-semibold text-primary hover:underline"
+              >
+                Register
+              </Link>
+            </p>
           </form>
         </CardContent>
       </Card>

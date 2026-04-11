@@ -7,6 +7,7 @@ const initialTasks: Task[] = [
     description: "Draft the scope and timeline for the upcoming milestone.",
     priority: "High",
     status: "Todo",
+    owner: "admin@test.com",
     createdAt: new Date("2026-01-01T09:00:00.000Z").toISOString()
   },
   {
@@ -15,6 +16,7 @@ const initialTasks: Task[] = [
     description: "Summarize 5 papers and compare methodology sections.",
     priority: "Medium",
     status: "Todo",
+    owner: "user@test.com",
     createdAt: new Date("2026-01-02T09:00:00.000Z").toISOString()
   },
   {
@@ -23,6 +25,7 @@ const initialTasks: Task[] = [
     description: "Create deterministic test scenarios for login and dashboard.",
     priority: "Low",
     status: "Done",
+    owner: "admin@test.com",
     createdAt: new Date("2026-01-03T09:00:00.000Z").toISOString()
   }
 ];

@@ -11,7 +11,8 @@ import type { Task } from "@/types/task";
 
 type TaskCardProps = {
   task: Task;
-  hideDelete: boolean;
+  canDelete: boolean;
+  showOwnerBadge: boolean;
   onToggleStatus: (task: Task) => Promise<void>;
   onEdit: (task: Task) => void;
   onDelete: (task: Task) => Promise<void>;
@@ -25,7 +26,8 @@ const priorityColor = {
 
 export function TaskCard({
   task,
-  hideDelete,
+  canDelete,
+  showOwnerBadge,
   onToggleStatus,
   onEdit,
   onDelete,
@@ -49,6 +51,11 @@ export function TaskCard({
           </div>
           <Badge variant={priorityColor[task.priority]}>{task.priority}</Badge>
         </div>
+        {showOwnerBadge ? (
+          <div className="pt-2">
+            <Badge variant="outline">Owner: {task.owner}</Badge>
+          </div>
+        ) : null}
       </CardHeader>
       <CardContent className="space-y-3 text-sm text-muted-foreground">
         <p>{task.description || "No description provided."}</p>
@@ -74,7 +81,7 @@ export function TaskCard({
         <Button type="button" variant="outline" onClick={() => onEdit(task)}>
           Edit
         </Button>
-        {!hideDelete ? (
+        {canDelete ? (
           <Button
             type="button"
             variant="destructive"

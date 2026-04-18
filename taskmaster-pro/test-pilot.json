@@ -1,0 +1,18 @@
+{
+  "config": {
+    "output": {
+      "directory": "./tests"
+    }
+  },
+  "projects": [
+    {
+      "id": "project-1776522383708",
+      "name": "Task Master Pro",
+      "description": "My application description",
+      "baseUrl": "http://localhost:3000",
+      "createdAt": "2026-04-18T14:26:23.708Z",
+      "updatedAt": "2026-04-18T14:39:14.308Z"
+    }
+  ],
+  "userStories": []
+}

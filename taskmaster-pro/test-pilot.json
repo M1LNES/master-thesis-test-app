@@ -8,11 +8,300 @@
     {
       "id": "project-1776522383708",
       "name": "Task Master Pro",
-      "description": "My application description",
+      "description": "Application for task management.",
       "baseUrl": "http://localhost:3000",
       "createdAt": "2026-04-18T14:26:23.708Z",
-      "updatedAt": "2026-04-18T14:39:14.308Z"
+      "updatedAt": "2026-04-18T22:07:14.471Z"
+    },
+    {
+      "id": "8af77afb-d963-4b74-ab8c-0fc5cf112ba2",
+      "name": "[r8] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=r8w5gb2n",
+      "createdAt": "2026-04-18T22:14:04.357Z",
+      "updatedAt": "2026-04-18T22:14:12.488Z"
+    },
+    {
+      "id": "964c5dc1-cd47-4f25-a5cc-137c8c09cd50",
+      "name": "[q7] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=q7m2vn4k",
+      "createdAt": "2026-04-18T22:17:13.594Z",
+      "updatedAt": "2026-04-18T22:18:09.934Z"
+    },
+    {
+      "id": "96685e5a-e7c7-4c79-a71a-aacedc1d74de",
+      "name": "[p3] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=p3x9ha1t",
+      "createdAt": "2026-04-18T22:18:05.270Z",
+      "updatedAt": "2026-04-18T22:18:22.549Z"
+    },
+    {
+      "id": "b8e71f2f-0a54-4d35-b8bd-ee71f68f20e4",
+      "name": "[a9] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=a9u3kd1x",
+      "createdAt": "2026-04-18T22:19:12.322Z",
+      "updatedAt": "2026-04-18T22:19:21.663Z"
+    },
+    {
+      "id": "9795b28b-6795-45e6-814c-24564301aaa4",
+      "name": "[n8] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=n8r4bf6q",
+      "createdAt": "2026-04-18T22:20:24.322Z",
+      "updatedAt": "2026-04-18T22:20:33.018Z"
+    },
+    {
+      "id": "073784e2-a6e6-475a-a290-d6452786eec4",
+      "name": "[y1] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=y1p6ls4v",
+      "createdAt": "2026-04-18T22:22:03.000Z",
+      "updatedAt": "2026-04-18T22:22:03.000Z"
+    },
+    {
+      "id": "4eb7a4f0-aa7a-49b8-83d0-dbc065473fae",
+      "name": "[t4] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=t4h9eu5m",
+      "createdAt": "2026-04-18T22:23:26.595Z",
+      "updatedAt": "2026-04-18T22:23:33.680Z"
+    },
+    {
+      "id": "4575f49a-5389-45b3-bb4e-3cfaad88ac5c",
+      "name": "[f6] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=f6j2qp9w",
+      "createdAt": "2026-04-18T22:24:32.924Z",
+      "updatedAt": "2026-04-18T22:24:41.806Z"
+    },
+    {
+      "id": "1c079cc2-f417-4f2a-bf25-d07ffac0d777",
+      "name": "[v1] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=v1s8yl3c",
+      "createdAt": "2026-04-18T22:26:11.959Z",
+      "updatedAt": "2026-04-18T22:27:33.150Z"
+    },
+    {
+      "id": "8c4cd7d8-5225-4778-8366-96e423786126",
+      "name": "[d5] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=d5k7mt2z",
+      "createdAt": "2026-04-18T22:27:24.029Z",
+      "updatedAt": "2026-04-18T22:27:42.612Z"
+    },
+    {
+      "id": "1c3f7c16-dd5c-482c-bd32-dcbb212c4d91",
+      "name": "[c2] Task Master Pro",
+      "description": "Application for task management.",
+      "baseUrl": "http://localhost:3000?b=c2n7zr8p",
+      "createdAt": "2026-04-18T22:28:33.196Z",
+      "updatedAt": "2026-04-18T22:28:33.196Z"
     }
   ],
-  "userStories": []
+  "userStories": [
+    {
+      "id": "f02c7e28-4622-4ac8-88dd-7a9135be24a2",
+      "projectId": "project-1776522383708",
+      "title": "[US-01] User Registration & Onboarding Flow",
+      "description": "As a new user, I want to securely register an account and subsequently log in with my new credentials.",
+      "acceptanceCriteria": "- **AC_01 (Navigation):** The registration form must be accessible via the \"Register\" link on the default login view.\n- **AC_02 (Validation):** The system must prevent registration if the 'Password' and 'Confirm Password' fields do not match, displaying an appropriate validation warning.\n- **AC_03 (Success):** Providing valid details with matching passwords successfully creates the account and automatically redirects the user back to the login page.\n- **AC_04 (Persistence):** The newly registered credentials must be immediately valid for authenticating into the dashboard.",
+      "extraInfo": "Let the application automatically handle unauthenticated routing.",
+      "createdAt": "2026-04-18T21:50:19.555Z",
+      "updatedAt": "2026-04-18T22:12:07.421Z"
+    },
+    {
+      "id": "d733a6df-f3f8-4dd9-8605-e6462e1ec21a",
+      "projectId": "project-1776522383708",
+      "title": "[US-02] Login Validation and Error Handling",
+      "description": "As a user, I must be prevented from logging in with invalid credentials and receive appropriate feedback.",
+      "acceptanceCriteria": "- **AC_01 (Initial State):** Upon accessing the application unauthenticated, the user is presented with the login interface where input fields must be empty by default.\n- **AC_02 (Empty Submission):** Attempting to submit the login form without providing both an email and a password must be blocked by local validation warnings.\n- **AC_03 (Invalid Credentials):** Submitting the form with an incorrect email or password must trigger a clearly visible \"Invalid credentials\" error message.",
+      "extraInfo": "Rely on dynamic locators and automatic waiting rather than hardcoded timeouts.",
+      "createdAt": "2026-04-18T21:59:29.911Z",
+      "updatedAt": "2026-04-18T22:12:21.043Z"
+    },
+    {
+      "id": "4f662d37-9b3b-4380-bcc4-3860db38a277",
+      "projectId": "project-1776522383708",
+      "title": "[US-03] Role-Based Navigation Visibility",
+      "description": "As a system administrator, I want to access privileged settings, while as a regular user, I must be strictly prevented from seeing or accessing administrative navigation links.",
+      "acceptanceCriteria": "- **AC_01 (Admin Access):** The system must render the 'System Settings' navigation tab in the header when authenticated as an administrator (`admin@test.com`).\n- **AC_02 (User Restriction):** The system must strictly omit the 'System Settings' tab from the DOM when authenticated as a standard user (`user@test.com`), preventing unauthorized discovery.\n- **AC_03 (Session Boundary):** The system must correctly isolate sessions; logging out and logging back in as a different role must immediately reflect that role's navigation permissions.",
+      "extraInfo": "The standard password for all test accounts is `password123`. Verification of AC_02 must ensure the element is physically absent from the DOM, not merely visually hidden.",
+      "createdAt": "2026-04-18T22:00:05.146Z",
+      "updatedAt": "2026-04-18T22:00:05.146Z"
+    },
+    {
+      "id": "13fb7328-5956-4df2-9c7b-bab8645a601f",
+      "projectId": "project-1776522383708",
+      "title": "[US-04] Create New Task and Verify Notification",
+      "description": "As a logged-in user, I want to create a new task and see a clear visual confirmation.",
+      "acceptanceCriteria": "1. Start at the base URL and log in using `user@test.com` and `password123`.\n2. Click the 'New Task' button to open the creation modal.\n3. Leave the Title field completely empty and click 'Save'.\n4. Verify that the form submission is prevented due to a required field validation.\n5. Fill the Title field with \"Test Task\" and select a Priority.\n6. Click 'Save' and verify that the modal automatically closes.\n7. Verify that the newly created \"Test Task\" is visible in the dashboard task list.\n8. Verify that a success Toast notification appears on the screen.",
+      "extraInfo": "Use strict text selectors where possible.",
+      "createdAt": "2026-04-18T22:00:46.027Z",
+      "updatedAt": "2026-04-18T22:00:46.027Z"
+    },
+    {
+      "id": "f30c588d-fe2b-48ce-b5ba-bbf1baa4a7bd",
+      "projectId": "project-1776522383708",
+      "title": "[US-05] Task Status Toggle and Filtering",
+      "description": "As a user, I want to mark tasks as completed and use filters to quickly find active tasks.",
+      "acceptanceCriteria": "1. Log in using `user@test.com` and `password123`.\n2. Locate an active task in the list and click its status checkbox.\n3. Verify that the checkbox reflects the checked state (marked as completed).\n4. Click the 'Active' filter button/radio.\n5. Verify that the task you just marked as completed is no longer visible in the task list.\n6. Click the 'Completed' filter button/radio.\n7. Verify that the completed task is now visible in the list again.",
+      "extraInfo": "Ensure you wait for the list to update after clicking the filters before making assertions.",
+      "createdAt": "2026-04-18T22:01:06.047Z",
+      "updatedAt": "2026-04-18T22:01:06.047Z"
+    },
+    {
+      "id": "b89242f1-2791-4d03-a3eb-281ed220db28",
+      "projectId": "project-1776522383708",
+      "title": "[US-06] Edit Task details via Modal",
+      "description": "As a user, I want to update existing tasks without navigating away from the dashboard.",
+      "acceptanceCriteria": "1. Log in using `user@test.com` and `password123`.\n2. Click the 'Edit' button on an existing task in the list.\n3. Verify that the edit modal opens and the input fields are pre-populated with the task's current data.\n4. Change the value in the 'Priority' field to a different option.\n5. Click the 'Save' button.\n6. Verify that the edit modal closes automatically.\n7. Verify that the task in the dashboard list now displays the updated Priority.",
+      "extraInfo": "",
+      "createdAt": "2026-04-18T22:01:28.148Z",
+      "updatedAt": "2026-04-18T22:01:28.148Z"
+    },
+    {
+      "id": "427b3fb9-f8f5-4c97-a600-54d479b3b2f0",
+      "projectId": "project-1776522383708",
+      "title": "[US-07] Role-Based Task Deletion Permissions",
+      "description": "As a system administrator, I can manage all tasks. As a user, I must not be able to delete tasks belonging to others to ensure data integrity.",
+      "acceptanceCriteria": "- **AC_01 (Admin Access):** - **Given** I am successfully logged in as an administrator (`admin@test.com`), \n  - **When** I view the dashboard task list, \n  - **Then** I should see the 'Delete' button on all tasks regardless of their owner.\n- **AC_02 (User Restriction):** - **Given** I am successfully logged in as a standard user (`user@test.com`), \n  - **When** I view the dashboard task list, \n  - **Then** I should only see the 'Delete' button on tasks owned by me, \n  - **And** I should strictly NOT see the 'Delete' button on tasks owned by the administrator.",
+      "extraInfo": "The standard password for all test accounts is `password123`. Ensure the absence of the delete button is verified at the DOM level.",
+      "createdAt": "2026-04-18T22:02:36.397Z",
+      "updatedAt": "2026-04-18T22:02:36.397Z"
+    },
+    {
+      "id": "9e07d7a8-de33-4f99-b8c4-957d65d5f91c",
+      "projectId": "project-1776522383708",
+      "title": "[US-08] Task Deletion Confirmation Flow",
+      "description": "As a user, I want to delete my task but be prompted for confirmation first to prevent accidental data loss.",
+      "acceptanceCriteria": "- **AC_01 (Confirmation Prompt):** - **Given** I am logged in as `user@test.com` and have an existing task, \n  - **When** I click the 'Delete' button on my task, \n  - **Then** the system must display a confirmation dialog before proceeding.\n- **AC_02 (Successful Deletion):** - **Given** the deletion confirmation dialog is visible, \n  - **When** I accept/confirm the deletion, \n  - **Then** the task must be permanently removed from the dashboard list, \n  - **And** a success Toast notification must be displayed to confirm the action.",
+      "extraInfo": "Use standard auto-waiting to verify the Toast notification. The password is `password123`.",
+      "createdAt": "2026-04-18T22:03:00.348Z",
+      "updatedAt": "2026-04-18T22:03:00.348Z"
+    },
+    {
+      "id": "707c23f8-0ede-44f5-b421-988a876110f0",
+      "projectId": "8af77afb-d963-4b74-ab8c-0fc5cf112ba2",
+      "title": "[US-01] User Registration & Onboarding Flow",
+      "description": "As a new user, I want to securely register an account and subsequently log in with my new credentials.",
+      "acceptanceCriteria": "- **AC_01 (Navigation):** The registration form must be accessible via the \"Register\" link on the default login view.\n- **AC_02 (Validation):** The system must prevent registration if the 'Password' and 'Confirm Password' fields do not match, displaying an appropriate validation warning.\n- **AC_03 (Success):** Providing valid details with matching passwords successfully creates the account and automatically redirects the user back to the login page.\n- **AC_04 (Persistence):** The newly registered credentials must be immediately valid for authenticating into the dashboard.",
+      "extraInfo": "Let the application automatically handle unauthenticated routing.",
+      "createdAt": "2026-04-18T22:16:34.600Z",
+      "updatedAt": "2026-04-18T22:16:34.600Z"
+    },
+    {
+      "id": "37da01ac-e434-4a36-b209-3265602804c0",
+      "projectId": "964c5dc1-cd47-4f25-a5cc-137c8c09cd50",
+      "title": "[US-02] Login Validation and Error Handling",
+      "description": "As a user, I must be prevented from logging in with invalid credentials and receive appropriate feedback.",
+      "acceptanceCriteria": "- **AC_01 (Initial State):** Upon accessing the application unauthenticated, the user is presented with the login interface where input fields must be empty by default.\n- **AC_02 (Empty Submission):** Attempting to submit the login form without providing both an email and a password must be blocked by local validation warnings.\n- **AC_03 (Invalid Credentials):** Submitting the form with an incorrect email or password must trigger a clearly visible \"Invalid credentials\" error message.",
+      "extraInfo": "Rely on dynamic locators and automatic waiting rather than hardcoded timeouts.",
+      "createdAt": "2026-04-18T22:17:35.786Z",
+      "updatedAt": "2026-04-18T22:17:35.786Z"
+    },
+    {
+      "id": "fbdaf12f-6de2-48f0-8d92-dd35cdb0af30",
+      "projectId": "96685e5a-e7c7-4c79-a71a-aacedc1d74de",
+      "title": "[US-02] Login Validation and Error Handling",
+      "description": "As a user, I must be prevented from logging in with invalid credentials and receive appropriate feedback.",
+      "acceptanceCriteria": "- **AC_01 (Initial State):** Upon accessing the application unauthenticated, the user is presented with the login interface where input fields must be empty by default.\n- **AC_02 (Empty Submission):** Attempting to submit the login form without providing both an email and a password must be blocked by local validation warnings.\n- **AC_03 (Invalid Credentials):** Submitting the form with an incorrect email or password must trigger a clearly visible \"Invalid credentials\" error message.",
+      "extraInfo": "Start at the base URL (`/`). Rely on dynamic locators and automatic waiting rather than hardcoded timeouts.",
+      "createdAt": "2026-04-18T22:18:43.710Z",
+      "updatedAt": "2026-04-18T22:18:43.710Z"
+    },
+    {
+      "id": "9845a624-7e88-4519-b21c-12eccb4a7e37",
+      "projectId": "b8e71f2f-0a54-4d35-b8bd-ee71f68f20e4",
+      "title": "[US-03] Role-Based Navigation Visibility",
+      "description": "As a system administrator, I want to access privileged settings, while as a regular user, I must be strictly prevented from seeing or accessing administrative navigation links.",
+      "acceptanceCriteria": "- **AC_01 (Admin Access):** The system must render the 'System Settings' navigation tab in the header when authenticated as an administrator (`admin@test.com`).\n- **AC_02 (User Restriction):** The system must strictly omit the 'System Settings' tab from the DOM when authenticated as a standard user (`user@test.com`), preventing unauthorized discovery.\n- **AC_03 (Session Boundary):** The system must correctly isolate sessions; logging out and logging back in as a different role must immediately reflect that role's navigation permissions.",
+      "extraInfo": "The standard password for all test accounts is `password123`. Verification of AC_02 must ensure the element is physically absent from the DOM, not merely visually hidden.",
+      "createdAt": "2026-04-18T22:19:41.885Z",
+      "updatedAt": "2026-04-18T22:19:41.885Z"
+    },
+    {
+      "id": "b65c89e7-34bf-4d70-afd6-ce4b2f79a98d",
+      "projectId": "9795b28b-6795-45e6-814c-24564301aaa4",
+      "title": "[US-04] Create New Task and Verify Notification",
+      "description": "As a logged-in user, I want to create a new task and see a clear visual confirmation.",
+      "acceptanceCriteria": "1. Start at the base URL and log in using `user@test.com` and `password123`.\n2. Click the 'New Task' button to open the creation modal.\n3. Leave the Title field completely empty and click 'Save'.\n4. Verify that the form submission is prevented due to a required field validation.\n5. Fill the Title field with \"Test Task\" and select a Priority.\n6. Click 'Save' and verify that the modal automatically closes.\n7. Verify that the newly created \"Test Task\" is visible in the dashboard task list.\n8. Verify that a success Toast notification appears on the screen.",
+      "extraInfo": "Use strict text selectors where possible.",
+      "createdAt": "2026-04-18T22:20:55.749Z",
+      "updatedAt": "2026-04-18T22:20:55.749Z"
+    },
+    {
+      "id": "1d8e9d6f-1a2e-4cbb-b81b-d2566ac4e25c",
+      "projectId": "073784e2-a6e6-475a-a290-d6452786eec4",
+      "title": "[US-04] Create New Task and Verify Notification",
+      "description": "As a logged-in user, I want to create a new task and see a clear visual confirmation.",
+      "acceptanceCriteria": "1. Start at the base URL and log in using `user@test.com` and `password123`.\n2. Click the 'New Task' button to open the creation modal.\n3. Leave the Title field completely empty and click 'Save'.\n4. Verify that the form submission is prevented due to a required field validation.\n5. Fill the Title field with \"Test Task\" and select a Priority.\n6. Click 'Save' and verify that the modal automatically closes.\n7. Verify that the newly created \"Test Task\" is visible in the dashboard task list.\n8. Verify that a success Toast notification appears on the screen.",
+      "extraInfo": "Use strict text selectors where possible.",
+      "createdAt": "2026-04-18T22:22:24.742Z",
+      "updatedAt": "2026-04-18T22:22:24.742Z"
+    },
+    {
+      "id": "b9e203fb-9aaa-4e9b-89e9-53c9efda4f87",
+      "projectId": "4eb7a4f0-aa7a-49b8-83d0-dbc065473fae",
+      "title": "[US-05] Task Status Toggle and Filtering",
+      "description": "As a user, I want to mark tasks as completed and use filters to quickly find active tasks.",
+      "acceptanceCriteria": "1. Log in using `user@test.com` and `password123`.\n2. Locate an active task in the list and click its status checkbox.\n3. Verify that the checkbox reflects the checked state (marked as completed).\n4. Click the 'Active' filter button/radio.\n5. Verify that the task you just marked as completed is no longer visible in the task list.\n6. Click the 'Completed' filter button/radio.\n7. Verify that the completed task is now visible in the list again.",
+      "extraInfo": "Ensure you wait for the list to update after clicking the filters before making assertions.",
+      "createdAt": "2026-04-18T22:23:54.597Z",
+      "updatedAt": "2026-04-18T22:23:54.597Z"
+    },
+    {
+      "id": "8db019e7-f8de-43b5-b7d5-e10a3fdafa1d",
+      "projectId": "4575f49a-5389-45b3-bb4e-3cfaad88ac5c",
+      "title": "[US-05] Task Status Toggle and Filtering",
+      "description": "As a user, I want to mark tasks as completed and use filters to quickly find active tasks.",
+      "acceptanceCriteria": "1. Log in using `user@test.com` and `password123`.\n2. Locate an active task in the list and click its status checkbox.\n3. Verify that the checkbox reflects the checked state (marked as completed).\n4. Click the 'Active' filter button/radio.\n5. Verify that the task you just marked as completed is no longer visible in the task list.\n6. Click the 'Completed' filter button/radio.\n7. Verify that the completed task is now visible in the list again.",
+      "extraInfo": "Ensure you wait for the list to update after clicking the filters before making assertions.",
+      "createdAt": "2026-04-18T22:25:03.970Z",
+      "updatedAt": "2026-04-18T22:25:03.970Z"
+    },
+    {
+      "id": "e7118eb8-5728-4628-aecd-b572d461211b",
+      "projectId": "1c079cc2-f417-4f2a-bf25-d07ffac0d777",
+      "title": "[US-06] Edit Task details via Modal",
+      "description": "As a user, I want to update existing tasks without navigating away from the dashboard.",
+      "acceptanceCriteria": "1. Log in using `user@test.com` and `password123`.\n2. Click the 'Edit' button on an existing task in the list.\n3. Verify that the edit modal opens and the input fields are pre-populated with the task's current data.\n4. Change the value in the 'Priority' field to a different option.\n5. Click the 'Save' button.\n6. Verify that the edit modal closes automatically.\n7. Verify that the task in the dashboard list now displays the updated Priority.",
+      "extraInfo": "",
+      "createdAt": "2026-04-18T22:26:48.164Z",
+      "updatedAt": "2026-04-18T22:26:48.164Z"
+    },
+    {
+      "id": "c6e599c7-0536-4ce5-a71e-85be35ddd2a7",
+      "projectId": "8c4cd7d8-5225-4778-8366-96e423786126",
+      "title": "[US-07] Role-Based Task Deletion Permissions",
+      "description": "As a system administrator, I can manage all tasks. As a user, I must not be able to delete tasks belonging to others to ensure data integrity.",
+      "acceptanceCriteria": "- **AC_01 (Admin Access):** - **Given** I am successfully logged in as an administrator (`admin@test.com`), \n  - **When** I view the dashboard task list, \n  - **Then** I should see the 'Delete' button on all tasks regardless of their owner.\n- **AC_02 (User Restriction):** - **Given** I am successfully logged in as a standard user (`user@test.com`), \n  - **When** I view the dashboard task list, \n  - **Then** I should only see the 'Delete' button on tasks owned by me, \n  - **And** I should strictly NOT see the 'Delete' button on tasks owned by the administrator.",
+      "extraInfo": "The standard password for all test accounts is `password123`. Ensure the absence of the delete button is verified at the DOM level.",
+      "createdAt": "2026-04-18T22:28:08.261Z",
+      "updatedAt": "2026-04-18T22:28:08.261Z"
+    },
+    {
+      "id": "46a7a57c-d26a-4a0b-8444-49384cb81bad",
+      "projectId": "1c3f7c16-dd5c-482c-bd32-dcbb212c4d91",
+      "title": "[US-07] Role-Based Task Deletion Permissions",
+      "description": "As a system administrator, I can manage all tasks. As a user, I must not be able to delete tasks belonging to others to ensure data integrity.",
+      "acceptanceCriteria": "- **AC_01 (Admin Access):** - **Given** I am successfully logged in as an administrator (`admin@test.com`), \n  - **When** I view the dashboard task list, \n  - **Then** I should see the 'Delete' button on all tasks regardless of their owner.\n- **AC_02 (User Restriction):** - **Given** I am successfully logged in as a standard user (`user@test.com`), \n  - **When** I view the dashboard task list, \n  - **Then** I should only see the 'Delete' button on tasks owned by me, \n  - **And** I should strictly NOT see the 'Delete' button on tasks owned by the administrator.",
+      "extraInfo": "The standard password for all test accounts is `password123`. Ensure the absence of the delete button is verified at the DOM level.",
+      "createdAt": "2026-04-18T22:28:58.949Z",
+      "updatedAt": "2026-04-18T22:28:58.949Z"
+    },
+    {
+      "projectId": "073784e2-a6e6-475a-a290-d6452786eec4",
+      "title": "[US-08] Task Deletion Confirmation Flow",
+      "description": "As a user, I want to delete my task but be prompted for confirmation first to prevent accidental data loss.",
+      "acceptanceCriteria": "- **AC_01 (Confirmation Prompt):** - **Given** I am logged in as `user@test.com` and have an existing task, \n  - **When** I click the 'Delete' button on my task, \n  - **Then** the system must display a confirmation dialog before proceeding.\n- **AC_02 (Successful Deletion):** - **Given** the deletion confirmation dialog is visible, \n  - **When** I accept/confirm the deletion, \n  - **Then** the task must be permanently removed from the dashboard list, \n  - **And** a success Toast notification must be displayed to confirm the action.",
+      "extraInfo": "Use standard auto-waiting to verify the Toast notification. The password is `password123`.",
+      "id": "4c6b7688-9998-460e-ab53-dfdfc5224c2f",
+      "createdAt": "2026-04-18T22:30:10.688Z",
+      "updatedAt": "2026-04-18T22:30:10.688Z"
+    }
+  ]
 }

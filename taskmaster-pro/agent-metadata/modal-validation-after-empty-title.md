@@ -1,0 +1,63 @@
+- generic:
+  - generic:
+    - main:
+      - generic:
+        - generic:
+          - heading [level=1]: TaskMaster Pro
+          - paragraph: Local-only test target for deterministic E2E scenarios.
+        - button: Logout
+      - generic:
+        - generic:
+          - group:
+            - generic: Task filters
+            - generic:
+              - radio [checked]
+              - generic: All
+            - generic:
+              - radio
+              - generic: Active
+            - generic:
+              - radio
+              - generic: Completed
+          - button: New Task
+      - region:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - heading [level=3]: Review related papers
+              - generic: Medium
+          - generic:
+            - paragraph: Summarize 5 papers and compare methodology sections.
+            - generic:
+              - checkbox
+              - generic: Mark as done
+          - generic:
+            - button: Edit
+            - button: Delete
+    - list
+  - dialog "Create New Task" [ref=e53]:
+    - generic [ref=e54]:
+      - heading "Create New Task" [level=2] [ref=e55]
+      - paragraph [ref=e56]: Add a task to your workflow.
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - text: Title
+        - textbox "Title" [active] [ref=e59]:
+          - /placeholder: Enter task title
+      - generic [ref=e60]:
+        - text: Description
+        - textbox "Description" [ref=e61]:
+          - /placeholder: Add optional details
+      - generic [ref=e62]:
+        - text: Priority
+        - combobox "Priority" [ref=e63]:
+          - option "Low"
+          - option "Medium" [selected]
+          - option "High"
+      - generic [ref=e64]:
+        - button "Cancel" [ref=e65] [cursor=pointer]
+        - button "Save Task" [ref=e66] [cursor=pointer]
+    - button "Close" [ref=e67] [cursor=pointer]:
+      - img [ref=e68]
+      - generic [ref=e71]: Close

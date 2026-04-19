@@ -1,0 +1,39 @@
+- generic [ref=e2]:
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "TaskMaster Pro" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Local-only test target for deterministic E2E scenarios.
+      - button "Logout" [ref=e22] [cursor=pointer]
+    - generic [ref=e24]:
+      - group "Task filters" [ref=e25]:
+        - generic [ref=e26]: Task filters
+        - generic [ref=e27]:
+          - radio "All" [checked] [ref=e28]
+          - generic [ref=e29]: All
+        - generic [ref=e30]:
+          - radio "Active" [ref=e31]
+          - generic [ref=e32]: Active
+        - generic [ref=e33]:
+          - radio "Completed" [ref=e34]
+          - generic [ref=e35]: Completed
+      - button "New Task" [ref=e36] [cursor=pointer]
+    - region "Task list" [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e40]:
+          - heading "Review related papers" [level=3] [ref=e42]
+          - generic [ref=e43]: Medium
+        - generic [ref=e44]:
+          - paragraph [ref=e45]: Summarize 5 papers and compare methodology sections.
+          - generic [ref=e46]:
+            - checkbox "Mark as done" [ref=e47]
+            - generic [ref=e48]: Mark as done
+        - generic [ref=e49]:
+          - button "Edit" [ref=e50] [cursor=pointer]
+          - button "Delete" [ref=e51] [cursor=pointer]
+  - region "Notifications (F8)":
+    - list [ref=e87]:
+      - listitem [ref=e96]:
+        - generic [ref=e98]: Task deleted successfully
+        - button [ref=e99] [cursor=pointer]:
+          - img [ref=e100]

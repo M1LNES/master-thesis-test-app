@@ -1,0 +1,35 @@
+- generic [ref=e2]:
+  - main [ref=e102]:
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - heading "TaskMaster Pro" [level=1] [ref=e105]
+        - paragraph [ref=e106]: Local-only test target for deterministic E2E scenarios.
+      - button "Logout" [ref=e107] [cursor=pointer]
+    - generic [ref=e109]:
+      - group "Task filters" [ref=e110]:
+        - generic [ref=e111]: Task filters
+        - generic [ref=e112]:
+          - radio "All" [checked] [ref=e113]
+          - generic [ref=e114]: All
+        - generic [ref=e115]:
+          - radio "Active" [ref=e116]
+          - generic [ref=e117]: Active
+        - generic [ref=e118]:
+          - radio "Completed" [ref=e119]
+          - generic [ref=e120]: Completed
+      - button "New Task" [ref=e121] [cursor=pointer]
+    - region "Task list" [ref=e122]:
+      - generic [ref=e123]:
+        - generic [ref=e125]:
+          - heading "Review related papers" [level=3] [ref=e127]
+          - generic [ref=e128]: Medium
+        - generic [ref=e129]:
+          - paragraph [ref=e130]: Summarize 5 papers and compare methodology sections.
+          - generic [ref=e131]:
+            - checkbox "Mark as done" [ref=e132]
+            - generic [ref=e133]: Mark as done
+        - generic [ref=e134]:
+          - button "Edit" [ref=e135] [cursor=pointer]
+          - button "Delete" [ref=e136] [cursor=pointer]
+  - region "Notifications (F8)":
+    - list

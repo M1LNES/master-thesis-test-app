@@ -1,0 +1,28 @@
+- generic [ref=e2]:
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "TaskMaster Pro" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Local-only test target for deterministic E2E scenarios.
+      - button "Logout" [ref=e22] [cursor=pointer]
+    - generic [ref=e24]:
+      - group "Task filters" [ref=e25]:
+        - generic [ref=e26]: Task filters
+        - generic [ref=e27]:
+          - radio "All" [checked] [ref=e28]
+          - generic [ref=e29]: All
+        - generic [ref=e30]:
+          - radio "Active" [ref=e31]
+          - generic [ref=e32]: Active
+        - generic [ref=e33]:
+          - radio "Completed" [ref=e34]
+          - generic [ref=e35]: Completed
+      - button "New Task" [ref=e36] [cursor=pointer]
+    - region "Task list" [ref=e37]:
+      - generic [ref=e53]: No tasks found for this filter.
+  - region "Notifications (F8)":
+    - list [ref=e55]:
+      - listitem [ref=e56]:
+        - generic [ref=e58]: Task deleted successfully
+        - button [ref=e59] [cursor=pointer]:
+          - img [ref=e60]

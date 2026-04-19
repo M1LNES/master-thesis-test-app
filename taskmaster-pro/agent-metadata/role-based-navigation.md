@@ -1,0 +1,20 @@
+- generic [ref=e2]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "Welcome Back" [level=3] [ref=e6]
+        - paragraph [ref=e7]: Sign in to access TaskMaster Pro.
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - text: Email
+          - textbox "Email" [ref=e11]
+        - generic [ref=e12]:
+          - text: Password
+          - textbox "Password" [ref=e13]
+        - button "Login" [ref=e14] [cursor=pointer]
+        - paragraph [ref=e15]:
+          - text: Need an account?
+          - link "Register" [ref=e16] [cursor=pointer]:
+            - /url: /register
+  - region "Notifications (F8)":
+    - list
